@@ -1,0 +1,6 @@
+read playerIdx:int
+read nbGames:int
+gameloop
+loop 3 read scoreInfo:string(64)
+loop nbGames read gpu:word(64) reg0:int reg1:int reg2:int reg3:int reg4:int reg5:int reg6:int
+write LEFT
