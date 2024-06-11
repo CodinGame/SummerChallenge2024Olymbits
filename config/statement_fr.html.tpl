@@ -373,9 +373,7 @@
           L'action à l'index 
           <const>1</const>
           déplacera votre joueur de 
-          <const>2</const>
-          cases mais augmentera votre <var>risk</var> de 
-          <const>1</const>
+          <const>2</const> cases
         </li>
         <li>
           L'action à l'index 
@@ -703,4 +701,20 @@
     </ul>
   </div>
   <!-- END -->
+
+    <!-- STORY -->
+    <div class="statement-story-background">
+        <div class="statement-story-cover"
+            style="background-size: cover; background-image: url(/servlet/fileservlet?id=103881564349131)">
+            <div class="statement-story" style="min-height: 300px; position: relative">
+                <h2><span style="color: #b3b9ad">Code source</span></h2>
+                <div class="story-text">
+                    <p>Vous pouvez voir le code source de ce jeu sur <a rel="nofollow" style="color: #f2bb13; border-bottom: 1px dotted #f2bb13;" target="_blank"
+                    href="https://github.com/CGjupoulton/SummerChallenge2024Olymbits">ce repo GitHub</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
+<!-- SHOW_SAVE_PDF_BUTTON -->

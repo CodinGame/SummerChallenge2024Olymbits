@@ -338,7 +338,7 @@
 
 <ul>
     <li>The action at index <const>0</const> will move your player by <const>1</const> space and <b>decrease</b> your <var>risk</var> by <const>1</const></li>
-    <li>The action at index <const>1</const> will move your player by <const>2</const> spaces but increase your <var>risk</var> by <const>1</const></li>
+    <li>The action at index <const>1</const> will move your player by <const>2</const> spaces</li>
     <li>The action at index <const>2</const> will move your player by <const>2</const> spaces but increase your <var>risk</var> by <const>1</const></li>
     <li>The action at index <const>3</const> will move your player by <const>3</const> space but increase your <var>risk</var> by <const>2</const></li>
 </ul>
@@ -659,28 +659,22 @@
 
 
     <!-- STORY -->
-    <!--
+    <!-- BEGIN level3 -->
+    
     <div class="statement-story-background">
         <div class="statement-story-cover" style="background-size: cover; background-image: url(/servlet/fileservlet?id=103881564349131);">
             <div class="statement-story" style="min-height: 200px; position: relative">
 
                 <div class="story-text">
-                    <h2><span style="color: #b3b9ad"><b>Starter Kit</b></span></h2>
-                    Starter AIs are available in the
-                    <a style="color: #f2bb13; border-bottom-color: #f2bb13;" target="_blank" href="https://github.com/CodinGame/SpringChallenge2023/tree/main/starterAIs">Starter
-                        Kit</a>.
-                    They can help you get started with your own bot. You can modify them to suit your own coding
-                    style or start completely
-                    from scratch.
-                    <br><br><br>
                     <h2><span style="color: #b3b9ad"><b>Source code</b></span></h2>
-                    The game's source will be available <a style="color: #f2bb13; border-bottom-color: #f2bb13;" target="_blank"
-                        href="https://github.com/CodinGame/SpringChallenge2023">here</a>.
+                    The game's source is available <a style="color: #f2bb13; border-bottom-color: #f2bb13;" target="_blank"
+                        href="https://github.com/CGjupoulton/SummerChallenge2024Olymbits">here</a>.
 
                 </div>
             </div>
         </div>
     </div>
-    -->
+    <!-- END -->
+
 </div>
 <!-- SHOW_SAVE_PDF_BUTTON -->
