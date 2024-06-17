@@ -152,11 +152,15 @@
       </p>
       <p>
         Les scores des <b>quatre</b> mini-jeux sont <b>multipliés ensemble</b> pour déterminer le <b>score global</b>.
+      <br>
+      <br>
+      <br>
+      <em>⚠️ Cela signifie donc que n'avoir que des médailles de bronze dans un mini-jeu vous donnera un score final de 0&nbsp;!</em>
       </p>
+      <br><br>
       <p>
         Pendant un tour de réinitialisation, le registre <var>GPU</var> affichera 
-        <const>"GAME_OVER"</const>
-        .
+        <const>"GAME_OVER"</const>.
       </p>
       <p>
         En cas d'égalité dans un mini-jeu, les joueurs ex æquo remporteront la même médaille la plus haute. Par exemple, si deux joueurs sont à égalité pour la première place, ils recevront tous les deux une médaille d'or et le troisième joueur recevra une médaille <b>de bronze</b>.
@@ -284,10 +288,15 @@
         Mini-jeu 2&nbsp;: Tir à l'arc
       </h3>
       Chaque joueur contrôle un curseur avec une coordonnée x et une coordonnée y. À chaque tour, les joueurs choisissent une direction, puis le curseur se déplace dans cette direction selon la force actuelle du <b>vent</b>. Après 
-      <const>10</const>
+      <const>10</const> à <const>15</const>
       tours, les joueurs remportent des médailles en fonction de leur proximité avec la coordonnée 
       <const>(0,0)</const>
       en distance euclidienne.
+
+<br><br>
+
+                    Les coordonnées x et y sont restreintes dans <const>[-20;20]</const>.
+
       <table style="margin-top: 20px; margin-bottom: 30px">
         <thead>
           <tr>
@@ -397,7 +406,7 @@
         Si le risque d'un joueur atteint 
         <const>5</const>
         ou plus, le joueur est <b>étourdi</b> pour les 
-        <const>3</const>
+        <const>2</const>
         prochains tours et son <var>risk</var> est réinitialisé à 
         <const>0</const>.
       </p>
@@ -469,12 +478,12 @@
         On appele cette série l'<b>objectif</b>.
       </p>
       <p>
-        À chaque tour où l'action d'un joueur correspond à la direction de l'objectif de ce tour, le joueur gagnera des points égaux à leur <b>multiplicateur de combo</b> actuel. Le multiplicateur de combo commence à 
-        <const>1</const>
+        À chaque tour où l'action d'un joueur correspond à la direction de l'objectif de ce tour, le joueur augmentera son <b>multiplicateur de combo</b> puis gagnera des points égaux à celui-ci. Le multiplicateur de combo commence à 
+        <const>0</const>
         et augmente de 
         <const>1</const>
         pour chaque tour consécutif où l'action du joueur correspond à l'objectif. Il <b>se réinitialise</b> à 
-        <const>1</const>
+        <const>0</const>
         lorsque l'action du joueur ne correspond pas à l'objectif.
       </p>
       <table style="margin-top: 20px; margin-bottom: 30px">
@@ -617,7 +626,7 @@
       <!-- END -->
       <!-- BEGIN level2 level3 -->
       Elle contient 
-      <const>10</const>
+      <const>13</const>
       entiers.
       <!-- END -->
       Le premier entier représentant le <b>score global</b> actuel du joueur suivi

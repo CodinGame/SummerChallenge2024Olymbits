@@ -144,11 +144,17 @@
                 
                 <p>At the end of the game, each player's score for each mini-game is calculated based on the number of medals earned in total, with this formula:</p>
 
-                <p><const>mini_game_score = nb_silver_medals + nb_gold_medals * 3 </const></p>
+                <p><const>mini_game_score = nb_silver_medals + nb_gold_medals * 3 </const><br>
+      
+      </p>
 
                 <p>
                     The scores for all <b>four</b> mini-games are <b>multiplied together</b> to determine the <b>final score</b>.
+      <br><br>
+      <em>⚠️ This means that having only bronze medals in either mini-game will give you a final score of 0!</em>
                 </p>
+      <br>
+      <br>
 
                 <p>
                     During a reset turn, the <var>GPU</var> register will show <const>"GAME_OVER"</const>.
@@ -269,7 +275,11 @@
     padding-bottom: 15px;">
                     Mini-game 2: Archery</h3>
 
-                    Each player controls a cursor with an x coordinate and a y coordinate. Each turn, players pick a direction, then move their cursor in by the current <b>wind strength</b> in that direction. After <const>10</const> turns, the players win medals according to how close they are to coordinate <const>(0,0)</const> in Euclidean distance.
+                    Each player controls a cursor with an x coordinate and a y coordinate. Each turn, players pick a direction, then move their cursor in by the current <b>wind strength</b> in that direction. After <const>12</const> to <const>15</const> turns, the players win medals according to how close they are to coordinate <const>(0,0)</const> in Euclidean distance.
+
+                    <br><br>
+
+                    The x and y coordinates are capped in within <const>[-20;20]</const>.
                
                     <table style="margin-top: 20px; margin-bottom: 30px">
                         <thead>
@@ -345,7 +355,7 @@
 
 <p>
     What's more, if after a move a player finds themselves on the same space as an opponent, both their <var>risk</var> is increased by <const>2</const>!
-    If a player risk rises to <const>5</const> or more, the player is stunned for the next <const>3</const> turns and their <var>risk</var> is reset to <const>0</const>.
+    If a player risk rises to <const>5</const> or more, the player is stunned for the next <const>2</const> turns and their <var>risk</var> is reset to <const>0</const>.
 </p>
 
 
@@ -414,7 +424,7 @@
                         The players must match the sequence of directions given at the start of each run, called the <b>diving goal</b>.
                     </p>
                     <p>
-                        Each turn where an agent's action matches this turn's diving goal direction, the player will earn points equal to their current <b>combo</b> multiplier. The combo multiplier starts at <const>1</const> and increases by <const>1</const> for each consecutive turn where the player's action matches the diving goal.
+                        Each turn where an agent's action matches this turn's diving goal direction, the player will increment their current <b>combo</b> multiplier, then earn points equal to its value. The combo multiplier starts at <const>1</const> and increases by <const>1</const> for each consecutive turn where the player's action matches the diving goal.
                         It also <b>resets</b> to <const>1</const> when the player's action does not match the diving goal.
                     </p>
 
@@ -565,7 +575,7 @@
             In this league, it contains <const>4</const> integers.
             <!-- END -->
             <!-- BEGIN level2 level3 -->
-            It contains <const>10</const> integers.             
+            It contains <const>13</const> integers.             
             <!-- END -->
             
             The first integer representing the player's current <b>final score points</b> followed 
